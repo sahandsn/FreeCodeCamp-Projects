@@ -1,0 +1,309 @@
+/* general */
+:root{
+    font-size: 20px;
+    --primary-color1: #da9f93;
+    --primary-color2: #ebd4cb;
+    --secondary-color: #2c0703;
+    --tertiary-color: #890620;
+  }
+  body{
+    margin: 0; 
+  }
+  *, :before, :after{
+    box-sizing: border-box;
+    /* border: black solid 1px; */
+    
+  }
+  *:not(i){
+    font-family: Prosto One, sans-serif;
+  }
+  
+  a{
+    color: var(--primary-color2);
+    text-decoration: none;
+  }
+  ul{
+    display: flex;
+  }
+  li{
+    list-style: none;
+  }
+  
+  /* sticky header */
+  header{
+    background-color: var(--secondary-color);
+    height: 10vh;
+    font-weight: 700;
+    font-size: 1.25rem;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    box-shadow: 0 0.05rem 0.1rem;
+    z-index: 1;
+  }
+  #sticky-header ul{
+    justify-content: flex-end;
+    align-items: center;
+    margin-top: 0;
+    margin-right: 0.5rem;
+    
+  }
+  #sticky-header li{
+    margin: auto 1.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 10vh;
+  }
+  #navbar a{
+    color: var(--primary-color2);
+    background-color: var(--secondary-color);
+    transition: background-color 0.3s;
+  }
+  #navbar a:hover{
+    background-color: var(--tertiary-color);
+  }
+  
+  /* first section */
+  #welcome-section{
+    background-color: var(--primary-color2);
+    margin-top: 10vh;
+    height: 90vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    scroll-margin-top: 10vh;
+  }
+  #welcome-section h1{
+    margin-top: -1rem;
+    font-size: 3.5rem;
+    color: var(--secondary-color);
+  }
+  #welcome-section p{
+    margin-top: -2.5rem;
+    font-size: 1.5rem;
+    color: var(--tertiary-color);
+    font-style: italic;
+  }
+  
+  
+  /* second section */
+  #projects-section{
+    background-color: var(--primary-color1);
+    scroll-margin-top: 10vh;
+    padding: 1.5rem;
+  }
+  #projects{
+    /* border: black solid 1px; */
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 2rem 1.5rem;
+    place-items: center;
+  }
+  .project-tile a{
+    width: 25vw;
+    height: 60vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    transform: scale(1,1);
+    transition: transform 0.3s;
+    border: 0.25rem solid var(--tertiary-color);
+    border-radius: 0 0 0.15rem 0.15rem;
+  }
+  .project-tile a:hover{
+    transform: scale(1.1,1.1);
+  }
+  #projects-section h2{
+    font-size: 2.5rem;
+    text-align: center;
+    margin: 3rem auto;
+    text-decoration: underline;
+    color: var(--secondary-color);
+    white-space: nowrap;
+  }
+  .project-title{
+    background-color: var(--tertiary-color);
+    height: 15%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.3rem;
+    
+  }
+  .project-image{
+    width: 100%;
+    height: 85%;
+  }
+  .project-image img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  
+  #more-projects{
+    margin: 3rem auto;
+    background-color: var(--tertiary-color);
+    height: 2.5rem;
+    width: 10rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.2rem;
+    border-radius: 0.15rem;
+    transition: background-color 0.3s;
+  }
+  #more-projects i{
+    margin-left: 0.4rem;
+    transform: translateX(0);
+    transition: transform 0.3s;
+  }
+  #more-projects:hover{
+    background-color: var(--secondary-color);
+  }
+  #more-projects:hover>i{
+    transform: translateX(0.25rem);
+  }
+  
+  /* third section */
+  #contact-section{
+    background-color: var(--primary-color2);
+    scroll-margin-top: 10vh;
+    height: 90vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: -1.25rem 0;
+    
+  }
+  #contact-section h2{
+    font-size: 3.5rem;
+    text-align: center;
+    margin-bottom: -1rem;
+    color: var(--secondary-color);
+  }
+  #contact-section>p{
+    font-style: italic;
+    color: var(--secondary-color);
+  }
+  #links{
+    margin-top: 1.5rem;
+    width: 50%;
+    display: flex;
+    justify-content: space-around;
+    font-size: 1.3rem;
+    margin-bottom: 3rem;
+  }
+  #links a{
+    color: var(--tertiary-color);
+  }
+  #links div{
+    transition: transform 0.3s;
+    transform: translateY(0px);
+    margin: 0.2rem;
+  }
+  #links div:hover{
+    transform: translateY(0.5rem);
+  }
+  
+  /* responsive design */
+  @media(max-width:990px){
+    #projects{
+    /* border: black solid 1px; */
+    grid-template-columns: 1fr 1fr;
+    }
+    :root{
+    font-size: 17px;
+    
+    } 
+    .project-tile a{
+      width: 37.5vw;
+      height: 70vh;
+    }
+  }
+  
+  @media(max-width:830px){
+    #projects{
+    /* border: black solid 1px; */
+    grid-template-columns: 1fr;
+    }
+    :root{
+    font-size: 15px;
+    
+    }
+    .project-tile a{
+      width: 40vw;
+      height: 70vh;
+    }
+  }
+  @media(max-width:700px){
+    #projects{
+    /* border: black solid 1px; */
+    grid-template-columns: 1fr;
+    }
+    :root{
+    font-size: 10px;
+    
+    }
+    .project-tile a{
+      width: 50vw;
+      height: 70vh;
+    }
+  }
+  @media(max-width:470px){
+    #projects{
+    /* border: black solid 1px; */
+    grid-template-columns: 1fr;
+    }
+    :root{
+    font-size: 8px;
+    
+    }
+    .project-tile a{
+      width: 50vw;
+      height: 50vh;
+    }
+  }
+  @media(max-width:380px){
+    #projects{
+    /* border: black solid 1px; */
+    grid-template-columns: 1fr;
+    }
+    :root{
+    font-size: 7px;
+    
+    }
+    .project-tile a{
+      width: 50vw;
+      height: 40vh;
+    }
+  }
+  /* mobile */
+  @media(max-width:325px){
+    #projects{
+    /* border: black solid 1px; */
+    grid-template-columns: 1fr;
+    }
+    :root{
+    font-size: 6px;
+    
+    }
+    .project-tile a{
+      width: 50vw;
+      height: 40vh;
+    }
+    #links{
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    }
+    #projects-section h2{
+      white-space: normal;
+    }
+    #links div:hover{
+      transform: translateX(0.5rem);
+    }
+  }

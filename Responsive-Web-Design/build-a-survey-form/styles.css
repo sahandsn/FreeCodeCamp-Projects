@@ -1,0 +1,39 @@
+body{
+    font-family: Tahoma, sans-serif;
+    color: #EBEBE3;
+    background-color: #2B2B28;
+    border-color: #C19898;
+  }
+  
+  
+  form{
+    max-width: 500px;
+    min-width: 350px;
+    width: 60vw;
+    margin: 40px auto;
+    border: 2px solid #C19898;
+    padding: 30px;
+    background-color: #4A4A48;
+    border-color: #C19898;
+    color: #EBEBE3;
+    box-shadow: 3px 3px 10px #C19898;
+  }
+  
+  input, textarea, select, button{
+    background-color: #C19898;
+    color: #EBEBE3;
+  }
+  
+  ::placeholder{
+    color: #EBEBE3;
+  }
+  
+  button{
+    display: block;
+    margin: 15px auto;
+    width: 100%;
+    height: 40px;
+    border-color: #C19898;
+    color: #EBEBE3;
+  }
+  

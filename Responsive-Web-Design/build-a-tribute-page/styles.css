@@ -1,0 +1,93 @@
+*{
+    box-sizing: border-box; 
+    font-family: -apple-system,system-ui,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif;
+    padding: 10px;
+    background-color: #222222;
+    color: white;
+  
+  }
+  
+  h1{
+    font-weight: 900;
+    margin-bottom: -10px;
+  }
+  
+  #main{
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 0 auto;
+    min-width: 300px;
+  }
+  
+  #image{
+    max-width: 100%;
+    height: auto;
+    /*check aspect ratio*/
+    aspect-ratio: 0.816;
+  }
+  
+  img{
+      display: block;
+      margin-bottom: -15px;
+  }
+  
+  .flex{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    
+  }
+  
+  ul>li{
+    font-weight: bold;
+    margin-bottom: 5px;
+    list-style: none;
+    font-size: 20px;
+  }
+  
+  ul :not(li){
+    font-weight: normal;
+    margin-top: -5px;
+    font-size: 16px;
+  }
+  
+  #title{
+    text-align: center;
+    font-size: 20px;
+  }
+  
+  #tribute-info, footer{
+    max-width: 500px;
+    width: 70%;
+    margin: 3px auto;
+    padding: 3px auto;
+  }
+  
+  #img-caption{
+    text-align: center;
+  }
+  
+  .center{
+    text-align: center;
+    margin-top: 30px;
+  }
+  
+  .bold{
+    font-weight: bold;
+  }
+  
+  .quote{
+    font-style: italic;
+    padding: 0;
+    margin-bottom: -15px;
+  }
+  
+  legend{
+    font-weight: 800;
+  }
+  
+  #tribute-link{
+    padding: 0;
+  }
